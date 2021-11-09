@@ -30,5 +30,6 @@ public class Main {
         }
         var usefulData = response.body();
         System.out.println(usefulData);
+        var dataParser = new Gson();
     }
 }
