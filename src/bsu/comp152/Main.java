@@ -5,6 +5,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import com.google.gson.Gson;
 
 public class Main {
 
@@ -27,6 +28,7 @@ public class Main {
             System.out.println("Something went terribly wrong - we have to close now");
             System.exit(-1);
         }
-        System.out.println(response);
+        var usefulData = response.body();
+        System.out.println(usefulData);
     }
 }
